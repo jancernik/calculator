@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sketch-A</title>
+    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="header">
+      <div class="left">
+        <a href="https://github.com/JnaCer/calculator" target="_blank" class="github">
+          <svg class="icon" id="github" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+          JnaCer 
+        </a>
+      </div>
+      <div class="right">
+        <input type="checkbox" class="checkbox" id="checkbox">
+        <label for="checkbox" class="switch">
+          <svg class="icon" id="moon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+          <svg class="icon" id="sun" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+          <div class="ball"></div>
+        </label>
+      </div>
+    </div>
+
+    <div class="main">
+      <div class="container">
+        <div class="display">
+          <div class="smallNum"></div>
+          <div class="bigNum"></div>
+        </div>
+        <div class="keypad">
+          <button id="clear-all">AC</button>
+          <button id="not">+/-</button>
+          <button id="%" class="operator">%</button>
+          <button id="/" class="operator">÷</button>
+
+          <button id="7" class="number">7</button>
+          <button id="8" class="number">8</button>
+          <button id="9" class="number">9</button>
+          <button id="*" class="operator">×</button>
+
+          <button id="4" class="number">4</button>
+          <button id="5" class="number">5</button>
+          <button id="6" class="number">6</button>
+          <button id="-" class="operator">−</button>
+
+          <button id="1" class="number">1</button>
+          <button id="2" class="number">2</button>
+          <button id="3" class="number">3</button>
+          <button id="+" class="operator">+</button>
+
+          <button id="." class="number">.</button>
+          <button id="0" class="number">0</button>
+          <button id="clear">⇤</button>
+          <button id="equals">=</button>
+        </div>
+      </div>
+    </div>
+    <div class="footer">
+      <div class="icons-info">
+        <svg class="icon" id="info" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12" y2="8"></line></svg>
+        <p class="icons-info-text">
+          Icons by <a href="https://freeicons.io/profile/714" target="_blank">Raj Dev</a> on <a href="https://freeicons.io/" target="_blank">freeicons.io</a> 
+        </p>
+      </div>
+    </div>
+  </body>
+</html>

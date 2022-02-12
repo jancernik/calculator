@@ -1,0 +1,235 @@
+:root {
+  --body-radius: 20px;
+  --button-radius: 50%;
+  --button-size: 52px;
+  --button-gap: 5px;
+  --operand-color: #752222;
+  --utilities-color: #d12f2f;
+  --transition-time: 0.3s;
+
+  --bg-color: #f2f2f2;
+  --keypad-color: #f2f2f2;
+  --display-color: #d3d3d3;
+  --main-font-color: #121212;
+  --secondary-font-color: #1d1d1d;
+  --heading-color: #f2f2f2;
+
+  --font-color: #424242;
+  --number-color: #424242;
+  --button-color: #c7c7c7;
+  --button-hover-color: #a8a8a8;
+  --button-action-color: #868686;
+}
+
+[data-theme="dark"] {
+  --bg-color: #1d1d1d;
+  --keypad-color: #1d1d1d;
+  --display-color: #121212;
+  --main-font-color: #f2f2f2;
+  --secondary-font-color: #d3d3d3;
+  --heading-color: #1d1d1d;
+}
+
+* {
+  transition: background-color var(--transition-time) ease, color var(--transition-time) ease;
+}
+
+a {
+  color: var(--secondary-font-color);
+}
+
+html,
+body {
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+  height: 100%;
+  font-size: 30px;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: var(--bg-color);
+}
+
+.header,
+.footer {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  height: 80px;
+  width: 100%;
+  background: transparent;
+}
+
+.footer {
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: var(--display-color);
+  border-radius: var(--body-radius);
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.3), 0 6px 20px 0 rgba(0, 0, 0, 0.3);
+}
+
+.display {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 65px;
+  width: 100%;
+  text-align: right;
+  gap: 10px;
+  padding: 20px 0px 20px 0px;
+  background: var(--display-color);
+  border-radius: var(--body-radius) var(--body-radius) 0px 0px;
+}
+
+.smallNum,
+.bigNum {
+  margin-right: 10px;
+  color: var(--main-font-color);
+}
+
+.smallNum {
+  font-size: 50%;
+  color: var(--secondary-font-color);
+}
+
+.keypad {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--button-gap);
+  padding: 10px;
+  background: var(--keypad-color);
+  border-radius: var(--body-radius);
+}
+
+button {
+  border-radius: var(--button-radius);
+  border-width: 0px;
+  background: var(--button-color);
+  font-size: 20px;
+  height: var(--button-size);
+  width: var(--button-size);
+  vertical-align: top;
+  background: var(--keypad-color);
+  color: var(--main-font-color);
+}
+
+button:hover {
+  background: rgb(200, 200, 200);
+}
+
+button:active {
+  background: rgb(168, 168, 168);
+}
+
+svg {
+  height: 17px;
+  width: 17px;
+  stroke: var(--main-font-color);
+  fill: none;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  margin: 4px;
+  transition: stroke var(--transition-time) ease;
+}
+
+#moon {
+  stroke: #d3d3d3;
+}
+
+#sun {
+  stroke: #1d1d1d;
+}
+
+#github {
+  margin: 0;
+  stroke: var(--secondary-font-color);
+}
+
+.github {
+  gap: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 17px;
+  width: 90px;
+  color: var(--secondary-font-color);
+  border-radius: 52px;
+  padding: 2px;
+  height: 26px;
+  background: var(--display-color);
+  text-decoration: none;
+}
+
+.icons-info {
+  margin-bottom: 3px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 15px;
+  height: fit-content;
+  border-radius: 0px;
+  color: var(--secondary-font-color);
+  transition: stroke var(--transition-time) ease;
+}
+
+p {
+  margin: 0;
+}
+
+.right,
+.left{
+  margin: 0px 15px 0px 15px;
+}
+
+.switch {
+  position: relative;
+  padding: 2px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 26px;
+  width: 50px;
+  border-radius: 52px;
+  background: var(--display-color);
+}
+
+.ball {
+  width: 19px;
+  height: 19px;
+  background: var(--keypad-color);
+  position: absolute;
+  left: 6px;
+  border-radius: 50%;
+  transition: transform 0.15s linear, background-color var(--transition-time) ease;
+}
+
+.checkbox:checked + .switch .ball {
+  transform: translateX(24px);
+}
+
+.checkbox {
+  opacity: 0;
+  position: absolute;
+}
