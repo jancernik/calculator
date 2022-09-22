@@ -17,8 +17,8 @@
   --font-color: #424242;
   --number-color: #424242;
   --button-color: #c7c7c7;
-  --button-hover-color: #a8a8a8;
-  --button-action-color: #868686;
+  --button-hover-color: rgb(200, 200, 200);
+  --button-action-color: rgb(168, 168, 168);
 }
 
 [data-theme='dark'] {
@@ -28,6 +28,8 @@
   --main-font-color: #f2f2f2;
   --secondary-font-color: #d3d3d3;
   --heading-color: #1d1d1d;
+  --button-hover-color: rgb(55, 55, 55);
+  --button-action-color: rgb(87, 87, 87);
 }
 
 * {
@@ -81,7 +83,7 @@ body {
   align-items: center;
   background: var(--display-color);
   border-radius: var(--body-radius);
-  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.3), 0 6px 20px 0 rgba(0, 0, 0, 0.3);
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.2);
 }
 
 .display {
@@ -127,14 +129,15 @@ button {
   vertical-align: top;
   background: var(--keypad-color);
   color: var(--main-font-color);
+  cursor: pointer;
 }
 
 button:hover {
-  background: rgb(200, 200, 200);
+  background: var(--button-hover-color);
 }
 
 button:active {
-  background: rgb(168, 168, 168);
+  background: var(--button-action-color);
 }
 
 svg {
@@ -192,6 +195,7 @@ p {
   width: 50px;
   border-radius: 52px;
   background: var(--display-color);
+  cursor: pointer;
 }
 
 .ball {
