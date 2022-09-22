@@ -21,7 +21,7 @@
   --button-action-color: #868686;
 }
 
-[data-theme="dark"] {
+[data-theme='dark'] {
   --bg-color: #1d1d1d;
   --keypad-color: #1d1d1d;
   --display-color: #121212;
@@ -31,7 +31,8 @@
 }
 
 * {
-  transition: background-color var(--transition-time) ease, color var(--transition-time) ease;
+  transition: background-color var(--transition-time) ease,
+    color var(--transition-time) ease;
 }
 
 a {
@@ -40,7 +41,7 @@ a {
 
 html,
 body {
-  font-family: "Roboto", sans-serif;
+  font-family: 'Roboto', sans-serif;
   margin: 0;
   height: 100%;
   font-size: 30px;
@@ -53,8 +54,7 @@ body {
   background: var(--bg-color);
 }
 
-.header,
-.footer {
+.header {
   margin: 0;
   padding: 0;
   display: flex;
@@ -64,11 +64,6 @@ body {
   height: 80px;
   width: 100%;
   background: transparent;
-}
-
-.footer {
-  justify-content: center;
-  align-items: flex-end;
 }
 
 .main {
@@ -143,28 +138,24 @@ button:active {
 }
 
 svg {
-  height: 17px;
-  width: 17px;
-  stroke: var(--main-font-color);
-  fill: none;
-  stroke-width: 2;
-  stroke-linecap: round;
-  stroke-linejoin: round;
+  height: 16px;
+  width: 16px;
+  fill: var(--main-font-color);
   margin: 4px;
-  transition: stroke var(--transition-time) ease;
+  transition: fill var(--transition-time) ease;
 }
 
 #moon {
-  stroke: #d3d3d3;
+  fill: #d3d3d3;
 }
 
 #sun {
-  stroke: #1d1d1d;
+  fill: #1d1d1d;
 }
 
 #github {
   margin: 0;
-  stroke: var(--secondary-font-color);
+  fill: var(--secondary-font-color);
 }
 
 .github {
@@ -182,24 +173,12 @@ svg {
   text-decoration: none;
 }
 
-.icons-info {
-  margin-bottom: 3px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 15px;
-  height: fit-content;
-  border-radius: 0px;
-  color: var(--secondary-font-color);
-  transition: stroke var(--transition-time) ease;
-}
-
 p {
   margin: 0;
 }
 
 .right,
-.left{
+.left {
   margin: 0px 15px 0px 15px;
 }
 
@@ -222,7 +201,8 @@ p {
   position: absolute;
   left: 6px;
   border-radius: 50%;
-  transition: transform 0.15s linear, background-color var(--transition-time) ease;
+  transition: transform 0.15s linear,
+    background-color var(--transition-time) ease;
 }
 
 .checkbox:checked + .switch .ball {
